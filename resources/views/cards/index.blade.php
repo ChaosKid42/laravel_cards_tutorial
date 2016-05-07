@@ -15,14 +15,22 @@
 		<hr>
 		<h3>Add an new card</h3>
 		<form method="POST" action="/cards">
+			{{ csrf_field() }}
 			<div class="form-group">
-				<textarea name="title" class="form-control"></textarea>
+				<textarea name="title" class="form-control">{{ old('title') }}</textarea>
 			</div>
 			<div class="form-group">
 				<button type="submit" class="btn btn-primary">Add card</button>
 			</div>
-			<input type="hidden" name="_token" value="{{ csrf_token() }}">
 		</form>
+
+		@if (count($errors))
+			<ul>
+				@foreach ($errors->all() as $error)
+					<li>{{ $error }}</li>
+				@endforeach
+			</ul>
+		@endif
 
 	</div>
 </div>

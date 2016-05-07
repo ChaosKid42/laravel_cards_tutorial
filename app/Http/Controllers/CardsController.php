@@ -25,8 +25,17 @@ class CardsController extends Controller
    public function store(Request $request)
 
     {	
-    	$card = new Card($request->all());
-    	$card->save();
+
+      $this->validate($request, [
+
+          'title' => 'required|min:10'
+
+      ]);
+
+    	
+      $card = new Card($request->all());
+    	
+      $card->save();
 
     	return back();
     }

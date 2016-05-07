@@ -16,9 +16,10 @@ class Card extends Model
     }
 
     
-    public function addNote(Note $note)
+    public function addNote(Note $note, $user_id)
 
     {
+    	$note->user_id = $user_id;
     	$this->notes()->save($note);
     }
 
