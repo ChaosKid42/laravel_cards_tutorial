@@ -11,7 +11,7 @@
 				<li class="list-group-item">
 					{{ $note->body }}
 					<div class="pull-right">
-						<a href="#"> {{ $note->user->name }} </a>
+						<a href="#"> {{ $note->user->username }} </a>
 						<a href="/notes/{{ $note->id }}/edit" class="btn btn-sm btn-danger"><span class="glyphicon glyphicon-edit"></span></a>
 					</div>
 					</li>
