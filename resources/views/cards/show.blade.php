@@ -8,7 +8,10 @@
 
 		<ul class="list-group">
 			@foreach ($card->notes as $note)
-			<li class="list-group-item">{{ $note->body }} <a href="/notes/{{ $note->id }}/edit" class="btn btn-sm btn-danger pull-right"><span class="glyphicon glyphicon-edit"></span></a> </li>
+				<li class="list-group-item">
+					{{ $note->body }}
+					<a href="/notes/{{ $note->id }}/edit" class="btn btn-sm btn-danger pull-right"><span class="glyphicon glyphicon-edit"></span></a>
+				</li>
 			@endforeach
 		</ul>
 
