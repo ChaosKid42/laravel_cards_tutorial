@@ -1,19 +1,9 @@
 {
   "name": "laravel_cards_tutorial",
-  "description": "",
-  "main": "",
-  "authors": [],
-  "license": "MIT",
-  "homepage": "https://github.com/ChaosKid42/laravel_cards_tutorial",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
   "dependencies": {
     "font-awesome": "fontawesome#^4.6.2",
-    "lato": "^0.3.0"
+    "lato": "^0.3.0",
+    "jquery": "^2.2.3",
+    "bootstrap-sass": "^3.3.6"
   }
 }
