@@ -7,7 +7,7 @@
 		<div class="col-md-10 col-md-offset-1">
 
 			<div class="panel panel-default">
-				<div class="panel-heading">Edit the note</div>
+				<div class="panel-heading">Notiz ändern</div>
 
 				<form method="POST" action="/notes/{{ $note->id }}">
 					{{ csrf_field() }}
@@ -16,7 +16,7 @@
 						<textarea name="body" class="form-control">{{ $note->body }}</textarea>
 					</div>
 					<div class="form-group">
-						<button type="submit" class="btn btn-primary">Update note</button>
+						<button type="submit" class="btn btn-primary">Notiz ändern</button>
 					</div>
 				</form>
 			</div>

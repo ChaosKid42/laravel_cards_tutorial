@@ -16,6 +16,7 @@ elixir(function(mix) {
     .copy('bower_components/bootstrap-sass/assets/fonts', 'public/build/fonts')
     .copy('bower_components/font-awesome/fonts', 'public/build/fonts')
     .copy('bower_components/lato/font', 'public/build/font')
+	.copy('vendor/caouecs/laravel-lang/src/de', 'resources/lang/de')
 	.scripts([
 		'../../../bower_components/jquery/dist/jquery.js',
 		'../../../bower_components/bootstrap-sass/assets/javascripts/bootstrap.js'

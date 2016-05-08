@@ -7,7 +7,7 @@
 		<div class="col-md-10 col-md-offset-1">
 
 			<div class="panel panel-default">
-				<div class="panel-heading">All Cards</div>
+				<div class="panel-heading">Alle Karten</div>
 				<ul class="list-group">
 					@foreach ($cards as $card)
 					<li class="list-group-item"><a href="/cards/{{ $card->id }}">{{ $card->title }}</a></li> 
@@ -15,14 +15,14 @@
 				</ul>
 
 				<hr>
-				<div class="panel-heading">Add an new card</div>
+				<div class="panel-heading">Neue Karte</div>
 				<form method="POST" action="/cards">
 					{{ csrf_field() }}
 					<div class="form-group">
 						<textarea name="title" class="form-control">{{ old('title') }}</textarea>
 					</div>
 					<div class="form-group">
-						<button type="submit" class="btn btn-primary">Add card</button>
+						<button type="submit" class="btn btn-primary">Karte hinzufügen</button>
 					</div>
 				</form>
 

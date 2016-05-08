@@ -22,14 +22,14 @@
 				</ul>
 
 				<hr>
-				<div class="panel-heading">Add an new note</div>
+				<div class="panel-heading">Neue Notiz</div>
 				<form method="POST" action="/cards/{{ $card->id }}/notes">
 					{{ csrf_field() }}
 					<div class="form-group">
 						<textarea name="body" class="form-control">{{ old('body') }}</textarea>
 					</div>
 					<div class="form-group">
-						<button type="submit" class="btn btn-primary">Add note</button>
+						<button type="submit" class="btn btn-primary">Notiz hinzufügen</button>
 					</div>
 				</form>
 
