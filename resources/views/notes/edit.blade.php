@@ -1,17 +1,26 @@
-@extends('layout')
+@extends('layouts.app')
 
 @section('content')
-	<h1>Edit the Note</h1>
+<div class="container">
+	<div class="row">
 
-	<form method="POST" action="/notes/{{ $note->id }}">
-		{{ csrf_field() }}
-		{{ method_field('PATCH') }}
-		<div class="form-group">
-			<textarea name="body" class="form-control">{{ $note->body }}</textarea>
-		</div>
-		<div class="form-group">
-			<button type="submit" class="btn btn-primary">Update note</button>
-		</div>
-	</form>
+		<div class="col-md-10 col-md-offset-1">
 
+			<div class="panel panel-default">
+				<div class="panel-heading">Edit the note</div>
+
+				<form method="POST" action="/notes/{{ $note->id }}">
+					{{ csrf_field() }}
+					{{ method_field('PATCH') }}
+					<div class="form-group">
+						<textarea name="body" class="form-control">{{ $note->body }}</textarea>
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-primary">Update note</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
 @stop

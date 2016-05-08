@@ -8,8 +8,20 @@ use App\Card;
 use App\Note;
 use App\User;
 
+
 class NotesController extends Controller
 {
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function store(Request $request, Card $card)
 
     {
@@ -22,8 +34,9 @@ class NotesController extends Controller
 
     	
         $note = new Note($request->all());
+        $note->user_id = $request->user()->id;
 
-        $card->addNote($note, 1);
+        $card->addNote($note);
 
     	return back();
     }
