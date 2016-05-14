@@ -1,6 +1,5 @@
 /vendor
 /node_modules
-/bower_components
 /public/storage
 /public/build
 /public/js

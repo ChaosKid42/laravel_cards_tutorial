@@ -1,9 +1,0 @@
-{
-  "name": "laravel_cards_tutorial",
-  "dependencies": {
-    "font-awesome": "fontawesome#^4.6.2",
-    "lato": "^0.3.0",
-    "jquery": "^2.2.3",
-    "bootstrap-sass": "^3.3.6"
-  }
-}
