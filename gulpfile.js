@@ -11,6 +11,8 @@ var elixir = require('laravel-elixir');
  |
  */
 
+require('laravel-elixir-vueify');
+
 elixir(function(mix) {
     mix.sass('app.scss')
     .copy('node_modules/bootstrap-sass/assets/fonts', 'public/build/fonts')
